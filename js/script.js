@@ -43,7 +43,6 @@ else {
 }
 
 divFrase.innerHTML = `<p>${mensajePantalla}</p>`;
-
 }
 
 setInterval(actualizarHoraFecha, 1000);
