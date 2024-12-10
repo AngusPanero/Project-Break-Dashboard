@@ -10,11 +10,22 @@
 
     <h1>Dashboard</h1>
 
-    <div id="reloj24">
-        
+    <div class="relojfecha">
+        <div id="reloj24"></div>
+        <div id="fecha"></div>
+        <div id="frase"></div>
+    </div>
+
+    <div class="contraseña">
+        <h1>Generador de Contraseñas Aleatorias</h1>
+        <label for="longitud">Número de caracteres de la Contraseña:</label>
+        <input type="number" id="longitud" min="12" max="50" value="12">
+        <button id="generar">Generar</button>
+        <p id="resultado"></p>
     </div>
 
 <script src="./js/script.js"></script>
+<script src="./js/mathscript.js"></script>
 
 </body>
 </html>
