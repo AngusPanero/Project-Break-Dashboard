@@ -14,8 +14,11 @@ const cargarLinks = () => {
     const guardarLinks = JSON.parse(localStorage.getItem("links"))|| []
     guardarLinks.forEach(link => {
         linksImp.innerHTML += `
-    <a class="vinculos" href="${link.enlace}"><p>${link.nombre}</p></a>
-    `
+        <div class="cadaLink">
+            <a class="vinculos" href="${link.enlace}"><p>${link.nombre}</p></a>
+            <button class="botonBorrar">x</button>
+        </div>
+        `    
     })
 }
 
@@ -31,10 +34,27 @@ boton.addEventListener("click", () => {
     } else{
 
     linksImp.innerHTML += `
-    <a class="vinculos" href="${enlace}"><p>${nombre}</p></a>
+    <div class="cadaLink">
+        <a class="vinculos" href="${enlace}"><p>${nombre}</p></a>
+        <button class="botonBorrar">x</button>
+    </div>    
     `
     linksLocalStorage(nombre, enlace)
     console.log("Nombre:", nombre, "Enlace:", enlace);
+    }
+})
+
+linksImp.addEventListener("click", (evento) => {
+    if(evento.target.classList.contains("botonBorrar")){
+        const boton = evento.target;
+        const contenedor = boton.parentElement
+        const enlace = contenedor.querySelector(".vinculos").href
+
+        contenedor.remove();
+
+        let guardarLinks = JSON.parse(localStorage.getItem("links")) || [];
+        guardarLinks = guardarLinks.filter(link => link.enlace !== enlace);
+        localStorage.setItem("links", JSON.stringify(guardarLinks));
     }
 })
 
