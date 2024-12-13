@@ -1,5 +1,6 @@
+const botonPais = document.getElementById("botonPais")
 const apiKey = "e73959ebf8294655bca200059240612" 
-const city = "london"
+const city = "Buenos Aires, Argentina"
 const ciudad = document.getElementById("ciudad")
 const climaDelDia = document.getElementById("climaDelDia")
 const pais = document.getElementById("ciudadPais")
@@ -20,11 +21,15 @@ const climaFetch = async () => {
         ` 
 
         ciudad.innerHTML = `
-            <img src="${data.current.condition.icon}">
-            <p>${data.current.temp_c}ºC</p>
-            <p>Viento: ${data.current.gust_kph} Km/h</p>
-            <p>Humedad: ${data.current.humidity}%</p>
-            <p>Precipitaciones: ${data.current.precip_in}%</p>
+            <div class="nubeData1">
+                <img class="nube" src="${data.current.condition.icon}">
+                <p class="grados">${data.current.temp_c}ºC</p>
+            </div>
+            <div class="nubeData">
+                <p>Viento: ${data.current.gust_kph} Km/h</p>
+                <p>Humedad: ${data.current.humidity}%</p>
+                <p>Precipitaciones: ${data.current.precip_in}%</p>
+            </div>
         `
 
         climaDelDia.innerHTML = "";
@@ -46,5 +51,6 @@ const climaFetch = async () => {
             console.log("Se ha producido un error", error);
         }
     }
+
 
 climaFetch();

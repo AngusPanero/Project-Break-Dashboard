@@ -1,4 +1,104 @@
+body{
+    font-family: ubuntu;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
 #generar{
     height: 2rem;
     width: 4rem;
+}
+
+.relojfecha{
+    background-color: rgba(128, 128, 128, 0.565);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    width: 30rem;
+}
+
+.pHora{
+    margin: 0.5rem;
+}
+
+.contraseña{
+    background-color: rgba(128, 128, 128, 0.565);
+    border-radius: 5px;
+    width: 30rem;
+    height: 8rem;
+}
+
+.links{
+    background-color: rgba(128, 128, 128, 0.565);
+    border-radius: 5px;
+    width: 30rem;
+}
+
+.climaContenedor{
+    background-color: rgba(128, 128, 128, 0.565);
+    border-radius: 5px;
+    padding-top: 0.5rem;
+    width: 30rem;
+    height: 21rem;
+    text-align: center;
+
+}
+
+#climaDelDia{
+    display: flex;
+    text-align: center;
+    overflow-x: scroll; /* Me Habilita el scroll horizontal */
+    white-space: nowrap; 
+}
+
+#ciudad{
+    background-color: rgba(128, 128, 128, 0.565);
+    border-radius: 5px;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px
+}
+
+#ciudadPais{
+    background-color: rgba(128, 128, 128, 0.565);
+    border-radius: 5px;
+    margin-left: 7.5rem;
+    width: 15rem;
+}
+
+p{
+    font-size: 15px;
+    font-family: ubuntu;
+}
+
+.grados{
+    font-size: 30px;
+}
+
+h1{
+    font-size: 20px;
+}
+
+.nube{
+    padding: 15px;
+    height: 6rem;
+    width: auto;
+}
+
+.nubeData{
+    gap: 6rem;
+}
+
+.nubeData1{
+    display: flex;
+    align-items: center;
+}
+
+div.nubeData P{
+    width: 15rem;
+    height: 15px;
 }

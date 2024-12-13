@@ -15,8 +15,12 @@ let horasFormat = String(horas).padStart(2, "0");
 let minutosFormat = String(minutos).padStart(2, "0");
 let segundosFormat = String(segundos).padStart(2, "0");
 
-divHoras.innerHTML = `<p>Hora: ${horasFormat}:${minutosFormat}:${segundosFormat}</p>`
-divFecha.innerHTML = `<p>fecha: ${dias}/${meses}/${año}</p>`
+divHoras.innerHTML = `
+<p class="pHora">Hora: ${horasFormat}:${minutosFormat}:${segundosFormat}</p>
+`
+divFecha.innerHTML = `
+<p class="pHora">fecha: ${dias}/${meses}/${año}</p>
+`
 
 let mensajePantalla = "";
 
@@ -42,7 +46,7 @@ else {
     mensajePantalla = "Buenas noches, es hora de pensar en parar y descansar";
 }
 
-divFrase.innerHTML = `<p>${mensajePantalla}</p>`;
+divFrase.innerHTML = `<p class="pHora">${mensajePantalla}</p>`;
 }
 
 setInterval(actualizarHoraFecha, 1000);
