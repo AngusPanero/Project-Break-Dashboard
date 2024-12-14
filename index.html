@@ -22,10 +22,12 @@
 
     <div class="contraseña">
         <h1>Generador de Contraseñas Aleatorias</h1>
-        <label for="longitud">Número de caracteres de la Contraseña:</label>
-        <input type="number" id="longitud" min="12" max="50" value="12">
-        <button id="generar">Generar</button>
-        <p id="resultado"></p>
+        <div class="bloqueContraseña">
+            <label for="longitud">Número de caracteres de la Contraseña:</label>
+            <input type="number" id="longitud" min="12" max="50" value="12">
+            <button id="generar">Generar</button>
+            <p id="resultado"></p>
+        </div>
     </div>
 
     <div class="climaContenedor">
@@ -36,10 +38,11 @@
 
     <div class="links">
         <h1>Añade tu Enlace de Interés</h1>
-        <input type="text" id="nombreUrl" placeholder="Nombre del Enlace">
-        <input type="text" id="url" placeholder="Pega Aqui la URL">
-        <button id="boton">Añadir Enlace</button>
-        <div id="linksImp">
+        <div>
+            <input type="text" id="nombreUrl" placeholder="Nombre del Enlace">
+            <input type="text" id="url" placeholder="Pega Aqui la URL">
+            <button id="boton">Añadir Enlace</button>
+            <div id="linksImp"></div>
         </div>
     </div>
 

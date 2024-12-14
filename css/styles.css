@@ -1,8 +1,15 @@
 body{
     font-family: ubuntu;
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
+    margin: 0; 
+    padding: 0; 
+    height: 100vh; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+img{
+    width: 100%;
 }
 
 #generar{
@@ -28,12 +35,20 @@ body{
     border-radius: 5px;
     width: 30rem;
     height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .links{
     background-color: rgba(128, 128, 128, 0.565);
     border-radius: 5px;
     width: 30rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .climaContenedor{

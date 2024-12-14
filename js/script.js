@@ -52,3 +52,22 @@ divFrase.innerHTML = `<p class="pHora">${mensajePantalla}</p>`;
 setInterval(actualizarHoraFecha, 1000);
 actualizarHoraFecha()
 
+const imganesDeFonsdo = [
+    'img/animals-3483162.jpg',
+    'img/drei-zinnen-4530237.jpg',
+    'img/fichtelbergbahn-8049565.jpg',
+    'img/nature-3463957.jpg',
+    'img/snow-leopard-1985510.jpg',
+    'img/winter-4026451.jpg',
+    'img/winter-9249426.jpg'
+]
+
+let indiceActual = 0
+
+const funcionCambiarFondo = () => {
+    document.body.style.backgroundImage = `url(${imganesDeFonsdo[indiceActual]})`
+    indiceActual = (indiceActual + 1 ) % imganesDeFonsdo // me divide hasta quedar de vuelta en cero (funciona tipo bucle)
+}
+
+funcionCambiarFondo()
+setInterval(funcionCambiarFondo, 5000);
