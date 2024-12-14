@@ -16,7 +16,7 @@ const cargarLinks = () => {
     guardarLinks.forEach(link => {
         linksImp.innerHTML += `
             <div class="cadaLink">
-                <a class="vinculos" href="${link.enlace}" target="_blank"><p>${link.nombre}</p></a>
+                <a class="vinculos" href="${link.enlace}" target="_blank"><p>${link.nombre.toUpperCase()}</p></a>
                 <button class="botonBorrar">x</button>
             </div>
         `;    
@@ -24,7 +24,7 @@ const cargarLinks = () => {
 };
 
 boton.addEventListener("click", () => {
-    const nombre = nombreUrl.value.trim();
+    const nombre = nombreUrl.value.toUpperCase().trim();
     const enlace = url.value.trim();
 
     let guardarLinks = JSON.parse(localStorage.getItem("links")) || [];
@@ -58,4 +58,3 @@ linksImp.addEventListener("click", (evento) => {
 });
 
 cargarLinks();
-

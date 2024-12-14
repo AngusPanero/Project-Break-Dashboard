@@ -16,10 +16,10 @@ let minutosFormat = String(minutos).padStart(2, "0");
 let segundosFormat = String(segundos).padStart(2, "0");
 
 divHoras.innerHTML = `
-<p class="pHora">Hora: ${horasFormat}:${minutosFormat}:${segundosFormat}</p>
+<p class="pHora">${horasFormat}:${minutosFormat}:${segundosFormat}</p>
 `
 divFecha.innerHTML = `
-<p class="pHora">fecha: ${dias}/${meses}/${año}</p>
+<p class="pFecha">${dias}.${meses}.${año}</p>
 `
 
 let mensajePantalla = "";
@@ -46,7 +46,7 @@ else {
     mensajePantalla = "Buenas noches, es hora de pensar en parar y descansar";
 }
 
-divFrase.innerHTML = `<p class="pHora">${mensajePantalla}</p>`;
+divFrase.innerHTML = `<p class="pFrase">${mensajePantalla}</p>`;
 }
 
 setInterval(actualizarHoraFecha, 1000);
@@ -66,8 +66,8 @@ let indiceActual = 0
 
 const funcionCambiarFondo = () => {
     document.body.style.backgroundImage = `url(${imganesDeFonsdo[indiceActual]})`
-    indiceActual = (indiceActual + 1 ) % imganesDeFonsdo // me divide hasta quedar de vuelta en cero (funciona tipo bucle)
+    indiceActual = (indiceActual + 1 ) % imganesDeFonsdo.length // me divide hasta quedar de vuelta en cero (funciona tipo bucle)
 }
 
 funcionCambiarFondo()
-setInterval(funcionCambiarFondo, 5000);
+setInterval(funcionCambiarFondo, 10000);

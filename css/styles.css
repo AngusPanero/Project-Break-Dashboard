@@ -6,19 +6,31 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: background-image 3s ease-in-out;
 }
 
 img{
     width: 100%;
 }
 
+input{
+    color: rgba(90, 90, 90, 0.828);
+    height: 1.5rem;
+    width: 2rem;
+    border-radius: 5px;
+    border: none;
+}
+
 #generar{
-    height: 2rem;
+    color: rgba(90, 90, 90, 0.828);
+    height: 1.7rem;
     width: 4rem;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
 }
 
 .relojfecha{
-    background-color: rgba(128, 128, 128, 0.565);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,31 +40,57 @@ img{
 
 .pHora{
     margin: 0.5rem;
+    position: relative;
+    text-align: center;
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.628);
 }
-
 .contraseña{
-    background-color: rgba(128, 128, 128, 0.565);
+    color: rgba(255, 255, 255, 0.828);
+    font-size: 1.2rem;
+    text-align: center;
     border-radius: 5px;
     width: 30rem;
-    height: 8rem;
+    height: 13rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    left: 70%;
+    top: 65% 
 }
 
 .links{
-    background-color: rgba(128, 128, 128, 0.565);
+    color: rgba(255, 255, 255, 0.828);
     border-radius: 5px;
     width: 30rem;
-    height: 10rem;
+    height: 40rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: absolute;
+    left: 3%;
+    top: 15.5%;
+}
+
+.cadaLink{
+    margin-top: 1rem;
+    font-family: ubuntu;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 23rem;
+    text-align: center; 
+}
+
+.ingresosLinks{
+    display: flex;
+    flex-direction: column;
+    gap: 12px
 }
 
 .climaContenedor{
-    background-color: rgba(128, 128, 128, 0.565);
     border-radius: 5px;
     padding-top: 0.5rem;
     width: 30rem;
@@ -66,10 +104,10 @@ img{
     text-align: center;
     overflow-x: scroll; /* Me Habilita el scroll horizontal */
     white-space: nowrap; 
+    gap: 1rem;
 }
 
 #ciudad{
-    background-color: rgba(128, 128, 128, 0.565);
     border-radius: 5px;
     display: flex;
     gap: 0.5rem;
@@ -78,11 +116,8 @@ img{
     margin-right: 10px
 }
 
-#ciudadPais{
-    background-color: rgba(128, 128, 128, 0.565);
-    border-radius: 5px;
-    margin-left: 7.5rem;
-    width: 15rem;
+.ciudadPais{
+    font-size: 1.6rem;
 }
 
 p{
@@ -116,4 +151,69 @@ h1{
 div.nubeData P{
     width: 15rem;
     height: 15px;
+}
+
+.pFecha{
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.628);
+}
+
+.pFrase{
+    position: relative;
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.628);
+}
+
+.climaContenedor{
+    position: absolute;
+    top: 15%;
+    left: 70%;
+    color: rgba(255, 255, 255, 0.828);
+}
+
+.inputPass{
+    text-align: center;
+    font-family: ubuntu;
+    width: 19rem;
+    color: rgba(255, 255, 255, 0.828);
+    height: 1.3rem;
+    background-color: rgba(255, 255, 255, 0.828);
+    border-radius: 5px;
+}
+
+#boton{
+    font-family: ubuntu;
+    margin-top: 0.5rem;
+    width: 19.3rem;
+    color: rgba(90, 90, 90, 0.828);
+    height: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.828);
+    border-radius: 5px;
+    border: none;
+}
+
+.botonBorrar{
+    font-family: ubuntu;
+    color: rgba(255, 255, 255, 0.828);
+    position: relative;
+    background-color: transparent;
+    border-radius: 50px;
+    border: 2px  rgba(27, 103, 255, 0.684) solid;
+    top: 7px;
+    right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1rem;
+    width: 1rem;
+    border: none;
+}
+
+a{
+    font-family: ubuntu;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.628);
 }

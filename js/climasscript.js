@@ -17,7 +17,7 @@ const climaFetch = async () => {
         console.log(data);
 
         pais.innerHTML = `
-            <p>${data.location.name}, ${data.location.country}</p>
+            <p class="ciudadPais">${data.location.name}, ${data.location.country}</p>
         ` 
 
         ciudad.innerHTML = `
