@@ -54,10 +54,17 @@ actualizarHoraFecha()
 
 const imganesDeFonsdo = [
     'img/animals-3483162.jpg',
+    'img/architecture-1297680.jpg',
+    'img/cat-1584965.jpg',
     'img/drei-zinnen-4530237.jpg',
     'img/fichtelbergbahn-8049565.jpg',
+    'img/lion-2647556.jpg',
     'img/nature-3463957.jpg',
+    'img/penguin-2203693.jpg',
+    'img/river-6858013.jpg',
+    'img/shark-674867.jpg',
     'img/snow-leopard-1985510.jpg',
+    'img/stream-6564840.jpg',
     'img/winter-4026451.jpg',
     'img/winter-9249426.jpg'
 ]

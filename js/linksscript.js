@@ -58,3 +58,5 @@ linksImp.addEventListener("click", (evento) => {
 });
 
 cargarLinks();
+
+console.log(localStorage)
